@@ -1,50 +1,159 @@
-# Welcome to your Expo app 👋
+# 🍔 Food Delivery App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo de delivery desenvolvido com React Native, Expo, TypeScript e Expo Router, com interface moderna utilizando NativeWind, React Native Paper, além de um backend simulado com JSON Server.
 
-## Get started
+O app possui telas, componentes e módulos organizados para facilitar escalabilidade e manutenção.
 
-1. Install dependencies
+# 🚀 Tecnologias Utilizadas
+Core
 
-   ```bash
-   npm install
-   ```
+Expo 51
 
-2. Start the app
+React Native 0.74
 
-   ```bash
-    npx expo start
-   ```
+TypeScript
 
-In the output, you'll find options to open the app in a
+Expo Router 3
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+React Navigation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+NativeWind + TailwindCSS
 
-## Get a fresh project
+React Native Paper
 
-When you're ready, run:
+Animações e gestos
 
-```bash
-npm run reset-project
-```
+React Native Reanimated
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+React Native Gesture Handler
 
-## Learn more
+UI e suporte
 
-To learn more about developing your project with Expo, look at the following resources:
+Expo Vector Icons
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Safe Area Context
 
-## Join the community
+Screens
 
-Join our community of developers creating universal apps.
+Expo Fonts / SystemUI / WebBrowser / Constants
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Web
+
+React Native Web
+
+React DOM
+
+React Router DOM
+
+Backend fake
+
+JSON Server
+
+📦 Instalação
+
+Clone o repositório:
+
+git clone https://github.com/seu-usuario/food-delivery.git
+cd food-delivery
+
+
+Instale as dependências:
+
+npm install
+
+
+Execute o app:
+
+npm start
+
+📁 Estrutura do Projeto
+
+Aqui está a estrutura atual do projeto (baseada na imagem enviada):
+
+/
+├── assets/                  # Imagens, ícones e fontes
+├── scripts/                 # Scripts auxiliares
+├── src/
+│   ├── app/                 # Sistema de rotas (Expo Router)
+│   ├── assets/              # Assets específicos do código
+│   ├── components/          # Componentes reutilizáveis
+│   │   ├── banner/
+│   │   ├── header/
+│   │   ├── list/
+│   │   ├── restaurants/
+│   │   │   ├── horizontal/
+│   │   │   └── index.tsx
+│   │   ├── search/
+│   │   ├── section/
+│   │   └── trending/
+│   ├── params/              # Tipos e parâmetros de navegação
+│   ├── styles/              # Styles globais / tema
+│   └── types/               # Tipagens globais
+└── package.json
+
+🗄️ Backend Fake com JSON Server
+
+Crie um arquivo db.json na raiz:
+
+{
+  "restaurants": [],
+  "products": [],
+  "orders": []
+}
+
+
+Inicie o servidor:
+
+npx json-server --watch db.json --port 3000
+
+
+API disponível em:
+
+http://localhost:3000
+
+🛠️ Scripts
+Comando	Função
+npm start	Inicia o Expo
+npm run android	Abre no Android
+npm run ios	Abre no iOS
+npm run web	Abre a versão Web
+npm test	Executa testes
+npm run lint	Lint do código
+npm run reset-project	Reseta caches e build
+🎨 Estilização (NativeWind)
+
+Exemplo:
+
+<View className="p-4 bg-red-500 rounded-xl">
+  <Text className="text-white font-bold">Pizza</Text>
+</View>
+
+🧪 Testes
+npm test
+
+
+Utiliza:
+
+Jest
+
+Jest-Expo
+
+React Test Renderer
+
+🔮 Roadmap
+
+ Tela de autenticação
+
+ Favoritos
+
+ Sistema completo de carrinho
+
+ Listagem de restaurantes por categoria
+
+ Checkout e pagamento
+
+ Histórico de pedidos
+
+ Notificações push
+
+ Integração com backend real
